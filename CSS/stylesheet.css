@@ -1,0 +1,170 @@
+html{
+	height:100%;
+}
+.header{
+	background-color:#36A1FF;
+	text-align:center;
+
+	top:0px;
+}
+body{
+	background-color:#0A61AD;
+	color:white;
+	font-family: sans-serif;
+    font-weight: bold;	
+	
+	padding: 4px 10px;
+	text-decoration: none;
+}
+.blogarea{
+	background-color:#FAA41B;
+	border-color:white;
+	
+	border-style:solid;
+	color:black;
+	padding-left:5px;
+	padding-top:5px;
+}
+.navtop{
+	text-align:center;
+	
+	width:100%;
+	margin-bottom:5px;
+	background-color:#FAA41B;
+}
+.sticky{
+	display:inline-block;
+	position:fixed;
+	top:0;
+	left:0%;
+	margin-top:0px;
+	margin-bottom:5px;
+	width:100%;
+	text-align:center;
+	z-index:2;
+}
+.b{
+	position:relative;	
+}
+#accuracy{
+	text-align: center;
+}
+
+
+#IDwindow{
+	position:relative;
+	margin-top:20px;
+	left:10%;
+	width:80%;
+	height:400px;
+	border-style:solid;
+	border-bottom-width:10px;
+	box-sizing:border-box;
+}
+#leftPane{
+	position:absolute;
+	top:0;
+	left:0;
+	height:394px;
+	width:50%;
+	
+	box-sizing:border-box;
+	border-style:solid;
+	border-right-width:5px;
+	border-bottom-width:2px;
+	border-right-color:black;
+	
+	background-color:#1B92FA;
+
+	
+}
+#result{
+	position:relative;	
+	text-align: center;
+
+}
+#rightPane{
+	position:absolute;
+	padding-top:10px;
+	top:0%;
+	left:50%;
+	height:394px;
+	width:50%;
+	box-sizing:border-box;
+	border-style:solid;
+	border-left-width:5px;
+	border-bottom-width:2px;
+	border-left-color:black;	
+	background-color:#36A1FF;
+	
+}
+
+.preview{
+	width: 250px;
+	height: 250px;
+	border: 1px solid black;
+	margin:auto;
+		margin-bottom:10px;
+	background-color: white;
+   
+   
+}
+.preview img{
+	display:none;
+
+}
+.infoContainers{
+	position:relative;
+	margin-top:20px;
+	left:10%;
+	width:80%;
+	height:600px;
+	border-style:solid;
+	margin-bottom:20px;
+	box-sizing:border-box;
+	background-color:#36A1FF;
+}
+.guideContainer{
+	position:absolute;
+	width:40%;
+	left:5%;
+	padding:50px;
+	margin-right:5%;
+}
+.egImg{
+	position: relative;
+	height:70%;
+	width:35%;
+	
+	
+}
+.blogimg{
+	position:relative;
+	margin-left:5px;
+}
+.statContainer{
+	position:absolute;
+	width:75%;
+	left:0%;
+	height:90%;
+	padding:50px;
+	margin-left:5%;
+}
+.centered{
+	text-align:center;
+}
+.footer{
+	position:fixed;
+	color:black;
+	background-color:#FAA41B;
+	bottom:0;
+	width:90%;
+	height:auto;
+	padding-bottom:5px;
+	transform:translate(-50%,0);
+	left:50%;
+	text-align:center;
+
+	border-style:solid;
+	box-sizing:border-box;
+}
