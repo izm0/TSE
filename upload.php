@@ -11,8 +11,13 @@
 	//file extension checker
 	if(in_array($imageFileType,$validExtensions)){
 		//upload file
-		if(move_uploaded_file($_FILES['userPhoto']['tmp_name'],$location)){
-			$response = $location;
+		if($_FILES['userPhoto']['size'] < 1000000){
+			if(move_uploaded_file($_FILES['userPhoto']['tmp_name'],$location)){
+				$response = $location;
+			}
+		}
+		else{
+			 throw new RuntimeException('Exceeded filesize limit.');
 		}
 	}
 	echo $response;
