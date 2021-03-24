@@ -3,7 +3,8 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="CSS\stylesheet.css">
 		<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-		<script src="JS\main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+		<script type="module"src="JS\main.js"></script>
 		
 	</head>
 	<body>
@@ -29,19 +30,20 @@
 				<div id="rightPane">
 				<form method="post" action="" enctype="multipart/form-data" id="uploadForm">
 					<div class="preview">
-						<img src="" id="img"  width="250" height="250">
+						<img src="" id="img"  width="299" height="299">
 					</div>
 					<div class="centered">
 						<input name="userPhoto"type="file" id="upload">
 						<input type="button" value="Upload Photo"id="submit">
 					</div>
 				</form>
+				<input type="button" value="Predict breed" id="predict">
 				<h3 class="centered">Our Model predicts that your dog is a :</h3>
 				<h2 id="result">Yorkshire terrier!</h2>
 				</div>
 			</div>
 			<div>
-				<h2 id="accuracy">Percentage accuracy: xx%</h2>
+				<h2 id="resultAcc">Percentage confidence: xx%</h2>
 			</div>
 		
 		</div>

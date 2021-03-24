@@ -46,17 +46,12 @@ body{
 .b{
 	position:relative;	
 }
-#accuracy{
-	text-align: center;
-}
-
-
 #IDwindow{
 	position:relative;
 	margin-top:20px;
 	left:10%;
 	width:80%;
-	height:400px;
+	height:500px;
 	border-style:solid;
 	border-bottom-width:10px;
 	box-sizing:border-box;
@@ -65,7 +60,7 @@ body{
 	position:absolute;
 	top:0;
 	left:0;
-	height:394px;
+	height:494px;
 	width:50%;
 	
 	box-sizing:border-box;
@@ -78,17 +73,26 @@ body{
 
 	
 }
+#predict{
+	position: relative;
+	left:44%;
+	text-align: center;
+}
 #result{
 	position:relative;	
 	text-align: center;
 
+}
+#resultAcc{
+	position:relative;	
+	text-align: center;
 }
 #rightPane{
 	position:absolute;
 	padding-top:10px;
 	top:0%;
 	left:50%;
-	height:394px;
+	height:494px;
 	width:50%;
 	box-sizing:border-box;
 	border-style:solid;
@@ -100,11 +104,11 @@ body{
 }
 
 .preview{
-	width: 250px;
-	height: 250px;
+	width: 299px;
+	height: 299px;
 	border: 1px solid black;
 	margin:auto;
-		margin-bottom:10px;
+	margin-bottom:10px;
 	background-color: white;
    
    
