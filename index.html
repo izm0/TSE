@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<!--<link rel="stylesheet" type="text/css" href="css\stylesheet.css">-->
+		<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/css.css">
+		<link rel="shortcut icon" type="image/jpg" href="assets/favicon.ico"/>
+		<title>Dog Breed Identifier</title>
+	</head>
+	<body>
+		<div class="header">
+			<img id="logo" src="assets/logo.png" alt="logo" width="100px" height="100px">
+			<h1 class="center-text">DOG BREED IDENTIFIER</h1>
+			<nav class="navbar navbar-expand-sm">
+				<div class="container-fluid">
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+						>
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">News</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">About</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div id="main">
+			<div class="container" id="uploadContainer">
+				<div class="row">
+					<div class="col" id="leftWindow">
+						<form method="post" action="" enctype="multipart/form-data" id="uploadForm">
+							<div class="preview">
+								<img src="" id="img" width="299" height="299" alt="">
+							</div>
+							<div class="centered" id="fileUpload">
+								<input name="userPhoto" type="file" id="upload">
+								<input type="button" value="Upload Photo" id="submit">
+							</div>
+							<input class="centered" type="button" value="Predict Breed" id="predict">
+						</form>
+					</div>
+					<div class="col" id="rightWindow">
+						<h3 class="centered">Our Model Predicts That Your Dog Is a:</h3>
+						<h2 id="result">Yorkshire Terrier!</h2>
+						<h3 id="resultAcc">Percentage confidence: 100%</h3>
+					</div>
+				</div>
+			</div>
+			<div id="stats">
+				<div class="row">
+					<div class="col">
+					</div>
+					<div class="col-5">
+						<h2>Breed Statistics</h2>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>			
+					</div>
+					<div class="col">
+					</div>
+				  </div>
+			</div>
+		</div>
+		<div class="container">
+			<h2 class="head">The Following Guidelines Will Help Give the Best Results!</h2>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<strong>#1 Take a photo of your dog as the main subject</strong>
+						</button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="row">
+								<div class="col-8 center-text">
+									<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+								<div class="col-4 center-text">
+									<img class="egImg" src="assets\sampleImg1.jpg" alt="image of golden retriever source:https://www.stanlyanimalclinics.com/services/dogs/breeds/golden-retriever" height="250" width="250">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						<strong>#2 Make sure the photo has been taken in a well lit area</strong>
+						</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						<strong>#3 GUIDELINE 3 PLACEHOLDER</strong>
+						</button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="blogarea">
+			<div class="container" id="blogContainer">
+				<h1 id="newsHeader">Dev News</h1>
+				<div class="row">
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="assets\screenshotmodel.png" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">20/02/21 - Early prototype </h5>
+								<p class="card-text">Early prototype by Wlad & Matt up and running on Azure! Despite the lack of accuracy this is good progress and we are gaining familiarity with the different modules used for ML.</p>
+								<a href="#" class="btn btn-primary">View</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="assets\screenshotmodel.png" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">02/03/21 - Resnet50 Test</h5>
+								<p class="card-text">We have a working prototype model! It uses a pretrained model for face/dog detection, we then specify the breed list and split the incoming data to determine a breed that is most likely from them.</p>
+								<a href="#" class="btn btn-primary">View</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="assets\screenshotmodel.png" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">07/04/21 - Website Update</h5>
+								<p class="card-text">The website has been redesigned using the previous content. Implementing Sib's new logo, and the bootstrap framework, the website can be optimised for multi-platform usage.</p>
+								<a href="#" class="btn btn-primary">View</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="footer" id="footer">
+			<script>
+				function closeFooter() {
+					document.getElementById("footer").style.display = "none";
+				}
+			</script>
+			<p>Developed by the University of Lincoln TSE group 19 </p>
+			<button class="btn" onclick="closeFooter()">X</button>
+		</div>
+	</body>
+</html>

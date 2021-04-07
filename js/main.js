@@ -16,13 +16,13 @@ var mainPage;
 				console.log("Removing class");
 			}
 
-		
+
 	});
-	
+
 	$("#upload").click(function(){
-		console.log("upload button clicked");		
+		console.log("upload button clicked");
 	});
-	
+
 	$( "#submit" ).click(function uploadImage(){
 		console.log("submitted clicked");
 		//form submitted with upload photo button
@@ -38,15 +38,15 @@ var mainPage;
 					$('.preview img').show();
 					console.log("here");
 					//console.log(xhttp);
-				
+
 			};
 		};
-		
+
 		//console.log(fd);
 		xhttp.send(fd);
 	});
 	async function predictImage() {
-		
+
 		const model = await tf.loadGraphModel('Model/tfjs/model.json');
 		//load converted model+weights
 		var input = tf.browser.fromPixels(document.getElementById("img")); //image
@@ -58,7 +58,7 @@ var mainPage;
 		return prediction.data();
     };
     mainPage.predictImage = predictImage;
-    
+
 })(mainPage || (mainPage = {}));
 
 $("#predict").click(async function(){
@@ -95,7 +95,7 @@ $("#predict").click(async function(){
 	parsedData.sort(function(a,b) {
 		if(a.item < b.item) {
 			return 1;
-		}			
+		}
 		else if (b.item < a.item) {
 			return -1;
 		}
@@ -103,8 +103,8 @@ $("#predict").click(async function(){
 			return 0;
 		}
 	});
-	
-	console.log(parsedData); //sorted results 	
+
+	console.log(parsedData); //sorted results
 	console.log("BEST DOG");
 	console.log(parsedData[0]); //top result (our best guess)
 	var bestDog = class_names[parsedData[0].idx];
@@ -115,6 +115,5 @@ $("#predict").click(async function(){
 	console.log(bestDog);
 });
 $(document).ready(function(){
-	console.log("ready"); 
-	
+	console.log("ready");
 });

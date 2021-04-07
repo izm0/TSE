@@ -4,15 +4,15 @@ html{
 .header{
 	background-color:#36A1FF;
 	text-align:center;
-
-	top:0px;
+	border-radius: 5px;
+}
+.header h1{
+	padding-top: 10px;
 }
 body{
 	background-color:#0A61AD;
 	color:white;
-	font-family: sans-serif;
-    font-weight: bold;	
-	
+	font-family: sans-serif;	
 	padding: 4px 10px;
 	text-decoration: none;
 }
@@ -23,7 +23,6 @@ body{
 	border-style:solid;
 	color:black;
 	padding-left:5px;
-	padding-top:5px;
 }
 .navtop{
 	text-align:center;
@@ -65,9 +64,8 @@ body{
 	
 	box-sizing:border-box;
 	border-style:solid;
-	border-right-width:5px;
+	border-right-width:3px;
 	border-bottom-width:2px;
-	border-right-color:black;
 	
 	background-color:#1B92FA;
 
@@ -96,13 +94,14 @@ body{
 	width:50%;
 	box-sizing:border-box;
 	border-style:solid;
-	border-left-width:5px;
-	border-bottom-width:2px;
-	border-left-color:black;	
+	border-left-width:3px;
+	border-bottom-width:2px;	
 	background-color:#36A1FF;
 	
 }
-
+#uploadContainer{
+	border: groove black;
+}
 .preview{
 	width: 299px;
 	height: 299px;
@@ -110,8 +109,6 @@ body{
 	margin:auto;
 	margin-bottom:10px;
 	background-color: white;
-   
-   
 }
 .preview img{
 	display:none;
@@ -130,7 +127,7 @@ body{
 }
 .guideContainer{
 	position:absolute;
-	width:40%;
+	width: auto;
 	left:5%;
 	padding:50px;
 	margin-right:5%;
