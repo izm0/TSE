@@ -65,28 +65,8 @@ $("#predict").click(async function(){
 	console.log(mainPage);
 	var prOutput = await mainPage.predictImage();
 	console.log(prOutput);
-	var class_names =['boston bull', 'dingo', 'pekinese', 'bluetick', 'golden retriever', 'bedlington terrier', 'borzoi',
-               'basenji', 'scottish deerhound', 'shetland sheepdog', 'walker hound', 'maltese dog', 'norfolk terrier',
-               'african hunting dog', 'wire-haired fox terrier', 'redbone', 'lakeland terrier', 'boxer', 'doberman',
-               'otterhound', 'standard schnauzer', 'irish water spaniel', 'black-and-tan coonhound', 'cairn',
-               'affenpinscher', 'labrador retriever', 'ibizan hound', 'english setter', 'weimaraner', 'giant schnauzer',
-               'groenendael', 'dhole', 'toy poodle', 'border terrier', 'tibetan terrier', 'norwegian elkhound',
-               'shih-tzu', 'irish terrier', 'kuvasz', 'german shepherd', 'greater swiss mountain dog', 'basset',
-               'australian terrier', 'schipperke', 'rhodesian ridgeback', 'irish setter', 'appenzeller', 'bloodhound',
-               'samoyed', 'miniature schnauzer', 'brittany spaniel', 'kelpie', 'papillon', 'border collie',
-               'entlebucher', 'collie', 'malamute', 'welsh springer spaniel', 'chihuahua', 'saluki', 'pug', 'malinois',
-               'komondor', 'airedale', 'leonberg', 'mexican hairless', 'bull mastiff', 'bernese mountain dog',
-               'american staffordshire terrier', 'lhasa', 'cardigan', 'italian greyhound', 'clumber', 'scotch terrier',
-               'afghan hound', 'old english sheepdog', 'saint bernard', 'miniature pinscher', 'eskimo dog',
-               'irish wolfhound', 'brabancon griffon', 'toy terrier', 'chow', 'flat-coated retriever',
-               'norwich terrier', 'soft-coated wheaten terrier', 'staffordshire bullterrier', 'english foxhound',
-               'gordon setter', 'siberian husky', 'newfoundland', 'briard', 'chesapeake bay retriever',
-               'dandie dinmont', 'great pyrenees', 'beagle', 'vizsla', 'west highland white terrier',
-               'kerry blue terrier', 'whippet', 'sealyham terrier', 'standard poodle', 'keeshond', 'japanese spaniel',
-               'miniature poodle', 'pomeranian', 'curly-coated retriever', 'yorkshire terrier', 'pembroke',
-               'great dane', 'blenheim spaniel', 'silky terrier', 'sussex spaniel', 'german short-haired pointer',
-               'french bulldog', 'bouvier des flandres', 'tibetan mastiff', 'english springer', 'cocker spaniel',
-               'rottweiler'];
+	var class_names =['affenpinscher', 'afghan_hound', 'african_hunting_dog', 'airedale', 'american_staffordshire_terrier', 'appenzeller', 'australian_terrier', 'basenji', 'basset', 'beagle', 'bedlington_terrier', 'bernese_mountain_dog', 'black-and-tan_coonhound', 'blenheim_spaniel', 'bloodhound', 'bluetick', 'border_collie', 'border_terrier', 'borzoi', 'boston_bull', 'bouvier_des_flandres', 'boxer', 'brabancon_griffon', 'briard', 'brittany_spaniel', 'bull_mastiff', 'cairn', 'cardigan', 'chesapeake_bay_retriever', 'chihuahua', 'chow', 'clumber', 'cocker_spaniel', 'collie', 'curly-coated_retriever', 'dandie_dinmont', 'dhole', 'dingo', 'doberman', 'english_foxhound', 'english_setter', 'english_springer', 'entlebucher', 'eskimo_dog', 'flat-coated_retriever', 'french_bulldog', 'german_shepherd', 'german_short-haired_pointer', 'giant_schnauzer', 'golden_retriever', 'gordon_setter', 'great_dane', 'great_pyrenees', 'greater_swiss_mountain_dog', 'groenendael', 'ibizan_hound', 'irish_setter', 'irish_terrier', 'irish_water_spaniel', 'irish_wolfhound', 'italian_greyhound', 'japanese_spaniel', 'keeshond',
+'kelpie', 'kerry_blue_terrier', 'komondor', 'kuvasz', 'labrador_retriever', 'lakeland_terrier', 'leonberg', 'lhasa', 'malamute', 'malinois', 'maltese_dog', 'mexican_hairless', 'miniature_pinscher', 'miniature_poodle', 'miniature_schnauzer', 'newfoundland', 'norfolk_terrier', 'norwegian_elkhound', 'norwich_terrier', 'old_english_sheepdog', 'otterhound', 'papillon', 'pekinese', 'pembroke', 'pomeranian', 'pug', 'redbone', 'rhodesian_ridgeback', 'rottweiler', 'saint_bernard', 'saluki', 'samoyed', 'schipperke', 'scotch_terrier', 'scottish_deerhound', 'sealyham_terrier', 'shetland_sheepdog', 'shih-tzu', 'siberian_husky', 'silky_terrier', 'soft-coated_wheaten_terrier', 'staffordshire_bullterrier', 'standard_poodle', 'standard_schnauzer', 'sussex_spaniel', 'tibetan_mastiff', 'tibetan_terrier', 'toy_poodle', 'toy_terrier', 'vizsla', 'walker_hound', 'weimaraner', 'welsh_springer_spaniel', 'west_highland_white_terrier', 'whippet', 'wire-haired_fox_terrier', 'yorkshire_terrier'];
 	var parsedData = new Array();
 	prOutput.forEach(function(item, index) {
 		parsedData.push({"idx":index, "item":item})
