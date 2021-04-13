@@ -40,7 +40,7 @@ var mainPage;
 					//console.log(xhttp);
 				
 			};
-		};
+		};https://www.dndbeyond.com/
 		
 		//console.log(fd);
 		xhttp.send(fd);
@@ -51,7 +51,7 @@ var mainPage;
 		//load converted model+weights
 		var input = tf.browser.fromPixels(document.getElementById("img")); //image
 		//take input from the html element uploaded to
-		input = input.reshape([-1,299,299,3]);
+		input = input.reshape([-1,224,224,3]);
 		input = input.toFloat();
 		//resizing/changing the image data for input
 		var prediction = model.predict(input);
@@ -103,7 +103,7 @@ $("#predict").click(async function(){
 			return 0;
 		}
 	});
-	
+	console.log(class_names); 
 	console.log(parsedData); //sorted results 	
 	console.log("BEST DOG");
 	console.log(parsedData[0]); //top result (our best guess)

@@ -30,7 +30,7 @@
 				<div id="rightPane">
 				<form method="post" action="" enctype="multipart/form-data" id="uploadForm">
 					<div class="preview">
-						<img src="" id="img"  width="299" height="299">
+						<img src="" id="img"  width="224" height="224">
 					</div>
 					<div class="centered">
 						<input name="userPhoto"type="file" id="upload">
